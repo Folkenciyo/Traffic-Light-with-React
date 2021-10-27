@@ -1,17 +1,32 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 //include images into your bundle
 
-import Buld from "./trafficlight.jsx";
+import Bulb from "./trafficlight.jsx";
 
 //create your first component
 
 const Home = () => {
+	const [light, setLight] = useState(false);
+
+	const switchBulb = () => {
+		setLight(!light);
+	};
 	return (
 		<div className="container">
-			<Buld key="stop" color="stop" />
-			<Buld key="wait" color="wait" />
-			<Buld key="go" color="go" />
+			<Bulb
+				key="stop"
+				color="stop"
+				light={light}
+				switchLight={switchBulb}
+			/>
+			<Bulb
+				key="wait"
+				color="wait"
+				switchLight={switchBulb}
+				light={light}
+			/>
+			<Bulb key="go" color="go" switchLight={switchBulb} light={light} />
 		</div>
 	);
 };

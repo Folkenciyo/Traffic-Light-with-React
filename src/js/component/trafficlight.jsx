@@ -1,48 +1,40 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-const Buld = props => {
+const Bulb = props => {
 	const [isColor, setIsColor] = useState(props.color);
-	const [lights, setLights] = useState([false, false, false]);
+	const [on, setOn] = useState(false);
 
 	useEffect(() => {
-		function setActiveLight(isActive, index) {
-			if (isActive) {
-				lights[index] = false;
-				setLights([...lights]);
-			} else if (lights.every(active => !active)) {
-				lights[index] = true;
-				setLights([...lights]);
-			}
+		if (on === false) {
+			setIsColor("");
+		} else {
+			setIsColor(props.color);
 		}
+	}, [props.light]);
 
-		return (
-			<ul className="traffic-light">
-				{lights.map((isActive, index) => (
-					<li
-						key={index}
-						onClick={() => setActiveLight(isActive, index)}>
-						<span className={isActive ? "on" : "off"} />
-					</li>
-				))}
-			</ul>
-		);
-	}, []);
 	return (
 		<div
-			className={`traffic-Ligth ${isColor}`}
+			className={`traffic-Light ${isColor}`}
 			onClick={() => {
 				if (isColor === "") {
 					setIsColor(props.color);
+					setOn(true);
+					props.switchLight();
 				} else {
 					setIsColor("");
+					setOn(false);
+					props.switchLight();
 				}
 			}}></div>
 	);
 };
 
-Buld.propTypes = {
-	color: PropTypes.string
+Bulb.propTypes = {
+	color: PropTypes.string,
+	switchLight: PropTypes.func,
+	light: PropTypes.bool,
+	key: PropTypes.string
 };
 
-export default Buld;
+export default Bulb;
