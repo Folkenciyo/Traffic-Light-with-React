@@ -1,24 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+
+import Buld from "./trafficlight.jsx";
 
 //create your first component
+
 const Home = () => {
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container">
+			<Buld key="stop" color="stop" />
+			<Buld key="wait" color="wait" />
+			<Buld key="go" color="go" />
 		</div>
 	);
 };

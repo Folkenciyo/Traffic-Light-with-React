@@ -11,3 +11,39 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+#app{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+  padding: 1rem;
+  width: fit-content;
+  background-color: black;
+}
+
+
+.traffic-Ligth{
+    height: 10rem;
+    width: 10rem;
+    background-color:grey;
+    border-radius: 50%;
+    margin: .5rem 0;  
+}
+
+.stop{
+    background-color: red;
+
+}
+
+.wait{
+    background-color: yellow;
+}
+
+.go{
+    background-color: green;
+}
+
+
+
