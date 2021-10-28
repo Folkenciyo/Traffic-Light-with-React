@@ -6,6 +6,7 @@ const Bulb = props => {
 	const [on, setOn] = useState(false);
 
 	useEffect(() => {
+		//Esto es pa´ cuando táh apagao, leuh´sca
 		if (on === false) {
 			setIsColor("");
 		} else {
@@ -17,13 +18,11 @@ const Bulb = props => {
 		<div
 			className={`traffic-Light ${isColor}`}
 			onClick={() => {
-				props.switchLight(props.color);
-				/* 	if (props.light || !color) {
-					setIsColor(props.color);
-				} else {
-					setIsColor("");
-				} */
-			}}></div>
+				props.switchLight(props.id);
+				console.log(props.id); //¿cómo pasar el props.id y que no salga undefined?
+			}}>
+			{props.text}
+		</div> //¿?
 	);
 };
 
@@ -31,7 +30,8 @@ Bulb.propTypes = {
 	color: PropTypes.string,
 	switchLight: PropTypes.func,
 	light: PropTypes.bool,
-	key: PropTypes.string
+	id: PropTypes.string,
+	emogi: PropTypes.string
 };
 
 export default Bulb;

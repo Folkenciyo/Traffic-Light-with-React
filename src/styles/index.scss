@@ -70,19 +70,13 @@ body{
 .stop{
     background:radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,112,112,1) 26%, rgba(244,6,6,1) 99%);
     z-index: 4;
-    box-shadow:
-    0 0 60px 30px #fff,
-    0 0 100px 60px #f0f,
-    0 0 140px 90px #0ff;
+    box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #dd2b7a, 0 0 140px 90px #f0d5a1;
 }
 
 .wait{
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,253,112,1) 26%, rgba(244,169,6,1) 99%);
     z-index: 4;
-    box-shadow:
-    0 0 60px 30px #fff,
-    0 0 100px 60px #f0f,
-    0 0 140px 90px #0ff;
+    box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fffc00, 0 0 140px 90px #ff9e00;
 }
 
 .go{
@@ -90,7 +84,7 @@ body{
     z-index: 4;
     box-shadow:
     0 0 60px 30px #fff,
-    0 0 100px 60px #f0f,
+    0 0 100px 60px #00ff25,
     0 0 140px 90px #0ff;
 }
 
