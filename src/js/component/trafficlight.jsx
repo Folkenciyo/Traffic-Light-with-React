@@ -17,15 +17,12 @@ const Bulb = props => {
 		<div
 			className={`traffic-Light ${isColor}`}
 			onClick={() => {
-				if (isColor === "") {
+				props.switchLight(props.color);
+				/* 	if (props.light || !color) {
 					setIsColor(props.color);
-					setOn(true);
-					props.switchLight();
 				} else {
 					setIsColor("");
-					setOn(false);
-					props.switchLight();
-				}
+				} */
 			}}></div>
 	);
 };
