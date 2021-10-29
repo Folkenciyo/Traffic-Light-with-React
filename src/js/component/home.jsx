@@ -19,11 +19,7 @@ const Home = () => {
 	const [textSecond, setTextSecond] = useState("");
 	const [textThirst, setTextThirst] = useState("");
 
-	const switchBulb = color => {
-		/* 	(color === "stop" ? state === true : false)(
-			color === "wait" ? state === true : false
-		)(color === "go" ? state === true : false); */
-
+	const switchBulb = (color, on) => {
 		if (color === "stop") {
 			setLightRed(true);
 			setLightGreen(false);
@@ -60,6 +56,18 @@ const Home = () => {
 			setTextFirst("");
 			setTextSecond("");
 			setTextThirst("(̶◉͛‿◉̶)");
+		} else {
+			setLightRed(true);
+			setLightYellow(true);
+			setLightGreen(true);
+
+			setColorFirst("stop");
+			setColorSecond("wait");
+			setColorThirst("go");
+
+			setTextFirst("( ˘︹˘ )");
+			setTextSecond("(ㆆ_ㆆ)");
+			setTextThirst("(̶◉͛‿◉̶)");
 		}
 	};
 
@@ -69,23 +77,20 @@ const Home = () => {
 			<div className="container">
 				<Bulb
 					key="stop"
-					id="stop"
 					color={colorFirst}
 					light={lightRed}
 					switchLight={switchBulb}
-					text={textFirst}
+					emogi={textFirst}
 				/>
 				<Bulb
 					key="wait"
-					id="wait"
 					color={colorSecond}
 					light={lightYellow}
 					switchLight={switchBulb}
-					text={textSecond}
+					emogi={textSecond}
 				/>
 				<Bulb
 					key="go"
-					id="go"
 					color={colorThirst}
 					light={lightGreen}
 					switchLight={switchBulb}
