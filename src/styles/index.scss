@@ -34,6 +34,7 @@ body{
 }
 
 .base{
+    z-index: 1;
     border-radius: 18%;
     border: outset;
     height: 40px;
@@ -65,21 +66,29 @@ body{
     border: 20px double #2e2656;
     margin: .5rem 0;  
     z-index: 2;
+    justify-content: center;
+    align-content: center;
 }
 
 .stop{
+    font-size: 40px;
+    display: inline-grid;
     background:radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,112,112,1) 26%, rgba(244,6,6,1) 99%);
     z-index: 4;
     box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #dd2b7a, 0 0 140px 90px #f0d5a1;
 }
 
 .wait{
+    font-size: 39px;
+    display: inline-grid;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,253,112,1) 26%, rgba(244,169,6,1) 99%);
     z-index: 4;
     box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fffc00, 0 0 140px 90px #ff9e00;
 }
 
 .go{
+    font-size: 40px;
+    display: inline-grid;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(122,255,112,1) 26%, rgba(6,244,9,1) 99%);
     z-index: 4;
     box-shadow:
