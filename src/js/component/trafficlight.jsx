@@ -19,12 +19,11 @@ const Bulb = props => {
 			className={`traffic-Light ${isColor}`}
 			onClick={e => {
 				setIsColor(props.color);
-				e.preventDefault();
+				/* e.preventDefault(); */
 				props.switchLight(props.color, on);
-				console.log(props.color); //¿cómo pasar el props.id y que no salga undefined?
 			}}>
 			{props.emogi}
-		</div> //¿?
+		</div>
 	);
 };
 

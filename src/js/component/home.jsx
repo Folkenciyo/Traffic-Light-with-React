@@ -15,7 +15,7 @@ const Home = () => {
 	const [colorSecond, setColorSecond] = useState("");
 	const [colorThirst, setColorThirst] = useState("");
 
-	const [textFirst, setTextFirst] = useState(""); //se llenan desde la funcion SwitchBulb
+	const [textFirst, setTextFirst] = useState("");
 	const [textSecond, setTextSecond] = useState("");
 	const [textThirst, setTextThirst] = useState("");
 
@@ -65,14 +65,15 @@ const Home = () => {
 			setColorSecond("wait");
 			setColorThirst("go");
 
-			setTextFirst("( ˘︹˘ )");
-			setTextSecond("(ㆆ_ㆆ)");
-			setTextThirst("(̶◉͛‿◉̶)");
+			setTextFirst("");
+			setTextSecond("");
+			setTextThirst("");
 		}
 	};
 
 	return (
 		<div className="all">
+			<p>DobleClic!</p>
 			<div className="base"></div>
 			<div className="container">
 				<Bulb

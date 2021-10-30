@@ -33,6 +33,11 @@ body{
     align-items: center;
 }
 
+p{
+    font-family: fantasy;
+    font-size: x-large;
+}
+
 .base{
     z-index: 1;
     border-radius: 18%;
@@ -71,6 +76,8 @@ body{
 }
 
 .stop{
+    font-weight: 600;
+    color: #2e2656;
     font-size: 40px;
     display: inline-grid;
     background:radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,112,112,1) 26%, rgba(244,6,6,1) 99%);
@@ -79,7 +86,9 @@ body{
 }
 
 .wait{
-    font-size: 39px;
+    font-weight: 600;
+    color: #2e2656;
+    font-size: 38px;
     display: inline-grid;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,253,112,1) 26%, rgba(244,169,6,1) 99%);
     z-index: 4;
@@ -87,6 +96,8 @@ body{
 }
 
 .go{
+    font-weight: 600;
+    color: #2e2656;
     font-size: 40px;
     display: inline-grid;
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(122,255,112,1) 26%, rgba(6,244,9,1) 99%);
